@@ -65,10 +65,11 @@ the next decision is made on evidence rather than rediscovered:
 
 ## Skills
 
-121 installed, and roughly 110 of those arrive as two large vendor packs, each
-of which earns its keep in a single project and nowhere else. That is a lot of
-listing budget charged to every session for two narrow tools. Two rules apply
-until it is trimmed:
+60 installed, down from 121. The larger of the two vendor packs was removed on
+2026-09-15 once the single project it served closed: 61 entries were being
+charged to every session's listing budget for work that had finished. What is
+left is still mostly one pack serving one project, so the same argument will
+come round again. Two rules apply meanwhile:
 
 **Name a skill exactly when a `CLAUDE.md` points at one.** A category matches
 several, and the wrong one will be picked.
