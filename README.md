@@ -65,11 +65,11 @@ the next decision is made on evidence rather than rediscovered:
 
 ## Skills
 
-60 installed, down from 121. The larger of the two vendor packs was removed on
-2026-09-15 once the single project it served closed: 61 entries were being
-charged to every session's listing budget for work that had finished. What is
-left is still mostly one pack serving one project, so the same argument will
-come round again. Two rules apply meanwhile:
+Halved on 2026-09-15, from 121 to 59. The larger vendor pack went once the
+single project it served closed — 61 entries charged to every session's listing
+budget for work that had finished — and one personal skill followed, its source
+already living in its own repo. What is left is still mostly one pack serving
+one project, so the same argument comes round again. Two rules apply meanwhile:
 
 **Name a skill exactly when a `CLAUDE.md` points at one.** A category matches
 several, and the wrong one will be picked.
