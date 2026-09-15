@@ -1,0 +1,61 @@
+{
+  "_comment": "Shareable form of settings.json. Copy to settings.json on a new machine and fill in the placeholders. The live settings.json is never tracked: it names a private project in its hooks and a client host in its permissions.",
+
+  "model": "opus[1m]",
+  "theme": "dark-daltonized",
+  "autoCompactEnabled": true,
+  "switchModelsOnFlag": true,
+  "inputNeededNotifEnabled": false,
+  "skipWorkflowUsageWarning": true,
+  "skillListingBudgetFraction": 0.021,
+
+  "env": {
+    "MCP_TIMEOUT": "60000"
+  },
+
+  "permissions": {
+    "allow": [],
+    "defaultMode": "default"
+  },
+
+  "worktree": {
+    "baseRef": "fresh"
+  },
+
+  "enabledPlugins": {
+    "vercel@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gbrain sync --source <SOURCE>",
+            "if": "Bash(git commit*)",
+            "shell": "powershell",
+            "timeout": 30,
+            "statusMessage": "Syncing gbrain...",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "gbrain sync --source <SOURCE>",
+            "shell": "powershell",
+            "timeout": 30,
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+# Deny by default.
+#
+# This directory is Claude Code's live working state, not a config folder:
+# it holds .credentials.json, session history, telemetry, and the memory
+# files under projects/. Publishing it wholesale would leak all of that.
+#
+# So nothing is tracked unless it is named below. Adding a file to this
+# repo is a deliberate act, never a side effect of `git add -A`.
+*
+
+!.gitignore
+!CLAUDE.md
+!README.md
+!settings.template.json
+
+!agents/
+!agents/*.md
+
+!commands/
+!commands/*.md
+
+# settings.json is deliberately absent and must stay that way: it names a
+# stealth project in its hooks and a client host in its permissions.
+# settings.template.json is the redacted, shareable form.
